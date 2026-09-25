@@ -40,13 +40,12 @@ required by law.
 
 Per-server settings are kept for as long as the Bot remains in a server.
 Removing the Bot from a server does not automatically delete its saved
-settings; to request deletion, contact [YOUR CONTACT METHOD].
+settings; to request deletion, use the contact method listed under Contact below.
 
 ## Where data is stored
 
-Server settings are stored on the infrastructure the Bot operator runs it on:
-private server hosted by third-party. They are
-not stored by any third-party analytics or data broker.
+Server settings are stored on a private server rented from a third-party
+hosting provider. They are not shared with any analytics service or data broker.
 
 ## Your rights
 

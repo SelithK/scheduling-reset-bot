@@ -37,22 +37,19 @@ pip install -r requirements.txt
 
 ### 5. Add your token
 
-Edit `start_bot.bat` and replace `PASTE-YOUR-TOKEN-HERE`, or set the
-`DISCORD_TOKEN` environment variable yourself. Don't commit your token anywhere
-(see the Git section below).
+On Windows, copy `start_bot.bat.example` to `start_bot.bat`, open it in a text
+editor and replace `PASTE-YOUR-TOKEN-HERE` with your token. On other systems, set
+the `DISCORD_TOKEN` environment variable instead. `start_bot.bat` is listed in
+`.gitignore`, so your token is never committed.
 
 ### 6. Run it
 
 ```
 python bot.py
 ```
-or double-click `start_bot.bat`. On first run it logs in, loads every file in
-`cogs/`, and registers the slash commands. They can take a few minutes to show
-up in Discord the first time.
-
-If you used the old single-file version of this bot, put its `reset_settings.json`
-in this folder before the first run — it's imported once into the new per-server
-files, then renamed to `.migrated`.
+or double-click `start_bot.bat` on Windows. On first run it logs in, loads every
+file in `cogs/`, and registers the slash commands. They can take a few minutes to
+show up in Discord the first time.
 
 ### 7. Configure each server
 
@@ -112,6 +109,7 @@ starts from the next scheduled day instead.
 | `cogs/channel_commands.py` | `/resetchannels list / add / remove / cleanup` |
 | `cogs/clear_commands.py` | `/clearnow` (delete now, with confirmation) and `/resetamount` |
 | `cogs/log_commands.py` | `/resetlog set / off / view`: the deletion log channel |
+| `start_bot.bat.example` | Windows launcher template. Copy to `start_bot.bat` and add your token. |
 | `data/guilds/<server id>.json` | Created automatically: each server's saved settings. |
 
 ## Clearing messages manually
@@ -156,29 +154,23 @@ Short logs are posted as a message; long ones are attached as a `.txt` file.
 
 ## License, Privacy Policy and Terms of Service
 
-- **[LICENSE](LICENSE)** — MIT. Says other people can use, copy, and modify this code,
-  with no warranty, as long as they keep the copyright notice.
-- **[Privacy Policy](PRIVACY_POLICY.md)** and **[Terms of Service](TERMS_OF_SERVICE.md)** — templates covering what
-  the Bot stores and how it may be used. Fill in the bracketed placeholders
-  (date, contact method, where you host the settings) before using them.
-  You need these two if you ever apply for Discord's bot verification (required
-  once a bot is in 100+ servers) — the Developer Portal asks for a Privacy
-  Policy URL and a Terms of Service URL. For a bot running only in your own
-  server(s), verification isn't required and these files are optional, but
-  they're good practice to have regardless.
-- To give them a URL Discord can use: turn on **Settings → Pages** for this repo
-  (deploy from the `main` branch, root folder). The files will then be reachable at
-  `https://selithk.github.io/scheduling-reset-bot/PRIVACY_POLICY.html` and
-  `https://selithk.github.io/scheduling-reset-bot/TERMS_OF_SERVICE.html`
-  (GitHub Pages renders `.md` files as pages). Paste those URLs into the Developer
-  Portal under your app's **General Information** tab.
+- **[License](LICENSE)**: MIT. You may use, copy, modify and share this code as
+  long as the copyright notice is kept. It comes with no warranty.
+- **[Privacy Policy](PRIVACY_POLICY.md)**: what the bot stores, what it processes,
+  and how that data is used.
+- **[Terms of Service](TERMS_OF_SERVICE.md)**: the terms for adding and using the bot.
+
+The Privacy Policy and Terms of Service cover the copy of the bot run by this
+repository's owner. If you host your own copy, you are its operator, and these
+documents don't cover it.
 
 ## Updating the bot
 
-Settings live in `data/`, separate from the code, so you can replace any `.py` file
-(or the whole code folder) and keep every server's settings, as long as you leave
-`data/` in place. To make that automatic, set `BOT_DATA_DIR` to a folder outside the
-bot folder (see `start_bot.bat`).
+Settings live in `data/`, separate from the code, so you can pull new code with
+`git pull` (or replace any `.py` file) and keep every server's settings, as long as
+you leave `data/` in place. To keep settings completely separate, set `BOT_DATA_DIR`
+to a folder outside the bot folder (there's a commented-out line for it in
+`start_bot.bat.example`).
 
 - **New commands:** add a new `.py` file to `cogs/` (copy an existing one as a pattern),
   then restart. It's found and loaded automatically and the slash commands are re-registered.
