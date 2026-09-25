@@ -1,9 +1,8 @@
 # Terms of Service
 
-*Last updated: [DATE]*
+*Last updated: 09-24-2026*
 
-These Terms govern use of this Discord bot ("the Bot"). Replace the bracketed
-parts, then delete this line. By adding the Bot to a server or using its
+These Terms govern use of this Discord bot "scheduling-reset-bot". By adding the Bot to a server or using its
 commands, you agree to these Terms.
 
 ## What the Bot does
@@ -51,4 +50,4 @@ a change means you accept the updated Terms.
 
 ## Contact
 
-Questions about these Terms: [YOUR CONTACT METHOD, e.g. a Discord username or email]
+Questions about these Terms: stephk @ discord
