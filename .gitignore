@@ -1,0 +1,17 @@
+# Server settings and any migrated legacy file — never commit these
+/data/
+reset_settings.json
+reset_settings.json.migrated
+
+# Your bot token — start_bot.bat holds it in plain text
+start_bot.bat
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Editor/OS clutter
+.vscode/
+.DS_Store

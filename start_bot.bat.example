@@ -1,0 +1,25 @@
+@echo off
+title Scheduling Reset Bot
+cd /d "%~dp0"
+
+rem ---- Paste your bot token between the = and the closing quote ----
+set "DISCORD_TOKEN=PASTE-YOUR-TOKEN-HERE"
+
+rem ---- Optional: keep server settings OUTSIDE this folder so updates can never touch them.
+rem ---- Remove "rem" from the next line and set your own folder.
+rem set "BOT_DATA_DIR=C:\Users\YOUR-NAME\scheduling-bot-data"
+
+if "%DISCORD_TOKEN%"=="PASTE-YOUR-TOKEN-HERE" (
+    echo You haven't added your token yet.
+    echo Right-click start_bot.bat, choose Edit, and replace PASTE-YOUR-TOKEN-HERE.
+    echo.
+    pause
+    exit /b 1
+)
+
+rem "py -3" runs the newest Python 3 you have installed. To force a version, use py -3.14
+py -3 bot.py
+
+echo.
+echo The bot has stopped. Scroll up to see why.
+pause
