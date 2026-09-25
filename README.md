@@ -156,9 +156,9 @@ Short logs are posted as a message; long ones are attached as a `.txt` file.
 
 ## License, Privacy Policy and Terms of Service
 
-- **`LICENSE`** — MIT. Says other people can use, copy, and modify this code,
+- **[LICENSE](LICENSE)** — MIT. Says other people can use, copy, and modify this code,
   with no warranty, as long as they keep the copyright notice.
-- **`PRIVACY_POLICY.md`** and **`TERMS_OF_SERVICE.md`** — templates covering what
+- **[Privacy Policy](PRIVACY_POLICY.md)** and **[Terms of Service](TERMS_OF_SERVICE.md)** — templates covering what
   the Bot stores and how it may be used. Fill in the bracketed placeholders
   (date, contact method, where you host the settings) before using them.
   You need these two if you ever apply for Discord's bot verification (required
@@ -166,12 +166,12 @@ Short logs are posted as a message; long ones are attached as a `.txt` file.
   Policy URL and a Terms of Service URL. For a bot running only in your own
   server(s), verification isn't required and these files are optional, but
   they're good practice to have regardless.
-- To give them a URL Discord can use: push this repo to GitHub, then turn on
-  **Settings → Pages** for the repo. Your files will be reachable at
-  `https://your-name.github.io/your-repo/PRIVACY_POLICY.html` (GitHub Pages
-  renders `.md` files as pages). Paste that URL, and the equivalent one for
-  Terms of Service, into the Developer Portal under your app's **General
-  Information** tab.
+- To give them a URL Discord can use: turn on **Settings → Pages** for this repo
+  (deploy from the `main` branch, root folder). The files will then be reachable at
+  `https://selithk.github.io/scheduling-reset-bot/PRIVACY_POLICY.html` and
+  `https://selithk.github.io/scheduling-reset-bot/TERMS_OF_SERVICE.html`
+  (GitHub Pages renders `.md` files as pages). Paste those URLs into the Developer
+  Portal under your app's **General Information** tab.
 
 ## Updating the bot
 
