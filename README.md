@@ -3,6 +3,22 @@
 Clears chosen channels on a schedule, separately for every server the bot is in.
 Also supports clearing on demand and logging what gets deleted.
 
+## Use the hosted bot
+
+You don't have to host the bot yourself. To add the already-running copy to your
+server, use this invite link and pick your server:
+
+**[Add Scheduling Reset Bot to your server](https://discord.com/oauth2/authorize?client_id=1552555234306302083&permissions=109568&integration_type=0&scope=bot)**
+
+You need the **Manage Server** permission in that server. The link asks for the
+permissions the bot needs: View Channels, Read Message History, Manage Messages,
+Send Messages and Attach Files. After adding it, skip to
+[Configure each server](#7-configure-each-server). Using the hosted bot means you
+agree to the [Terms of Service](TERMS_OF_SERVICE.md) and
+[Privacy Policy](PRIVACY_POLICY.md).
+
+To run your own copy instead, follow the setup below.
+
 ## Setup, start to finish
 
 ### 1. Install Python
